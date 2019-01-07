@@ -1,7 +1,5 @@
-# Node.js with Angular
-# Build a Node.js project that uses Angular.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+# Installs Node and then builds the angular application
+# Taken from nodeJS azure pipeline template
 
 trigger:
 - master
@@ -12,7 +10,7 @@ pool:
 steps:
 - task: NodeTool@0
   inputs:
-    versionSpec: '8.x'
+    versionSpec: '10.15'
   displayName: 'Install Node.js'
 
 - script: |
